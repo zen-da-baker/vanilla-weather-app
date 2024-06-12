@@ -1,7 +1,3 @@
-function changeText() {
-    document.getElementById("heading").innerHTML = "text";
-}
-
-function apiRequest() {
-    
+function namePerris() {
+    document.getElementById("heading").innerHTML = "Perris";
 }

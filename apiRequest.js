@@ -8,6 +8,8 @@ const sanFrancisco = "MTR/85,102/forecast";
 const lasVegas = "VEF/124,94/forecast";
 const portland = "PQR/120,92/forecast";
 
+let endpoint = lasVegas;
+
 let json;
 
 function renderResponse(res) {
@@ -73,7 +75,7 @@ function renderResponse(res) {
 
 const getData = async () => {
     try {
-        const response = await fetch(url+perris);
+        const response = await fetch(url+endpoint);
 
         if (response.ok) {
             const jsonResponse = await response.json();
