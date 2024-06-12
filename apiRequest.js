@@ -1,7 +1,12 @@
 const url = "https://api.weather.gov/gridpoints/";
 
-const perrisLong = "points/33,-117";
 const perris = "SGX/65,25/forecast";
+const la = "LOX/164,41/forecast";
+const sanDiego = "SGX/62,12/forecast";
+const sacramento = "STO/43,64/forecast";
+const sanFrancisco = "MTR/85,102/forecast";
+const lasVegas = "VEF/124,94/forecast";
+const portland = "PQR/120,92/forecast";
 
 let json;
 
