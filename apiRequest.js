@@ -12,7 +12,14 @@ function renderResponse(res) {
         `
         <h2>${periods[0].name}</h2>
         <p>${periods[0].detailedForecast}</p>
-        <p> Temp: ${periods[0].temperature}</p>
+        <p>Temp: ${periods[0].temperature} ${periods[0].temperatureUnit}</p>
+        `;
+    
+    document.getElementById("night1").innerHTML = 
+        `
+        <h3>${periods[1].name}</h2>
+        <p>${periods[1].detailedForecast}</p>
+        <p>Temp: ${periods[1].temperature} ${periods[1].temperatureUnit}</p>
         `;
 
 }
