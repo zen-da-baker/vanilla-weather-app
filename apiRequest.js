@@ -43,21 +43,21 @@ function renderResponse(res) {
         <p>Temp: ${periods[6].temperature} ${periods[6].temperatureUnit}</p>
         `;
 
-        document.getElementById("day5").innerHTML = 
+    document.getElementById("day5").innerHTML = 
         `
         <h2>${periods[8].name}</h2>
         <p>${periods[8].detailedForecast}</p>
         <p>Temp: ${periods[8].temperature} ${periods[8].temperatureUnit}</p>
         `;
 
-        document.getElementById("day6").innerHTML = 
+    document.getElementById("day6").innerHTML = 
         `
         <h2>${periods[10].name}</h2>
         <p>${periods[10].detailedForecast}</p>
         <p>Temp: ${periods[10].temperature} ${periods[10].temperatureUnit}</p>
         `;
 
-        document.getElementById("day7").innerHTML = 
+    document.getElementById("day7").innerHTML = 
         `
         <h2>${periods[12].name}</h2>
         <p>${periods[12].detailedForecast}</p>
