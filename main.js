@@ -1,3 +1,8 @@
+function changeTitle(city) {
+    document.getElementById("title").innerHTML = city;
+}
+
+/*
 function namePerris() {
     document.getElementById("title").innerHTML = "Perris";
 }
@@ -25,3 +30,4 @@ function nameLasVegas() {
 function namePortland() {
     document.getElementById("title").innerHTML = "Portland";
 }
+*/
