@@ -10,38 +10,24 @@ const portland = "PQR/120,92/forecast";
 
 let endpoint = lasVegas;
 
-function selectPerris() {
-    endpoint = perris;
-    getData();
-}
+function selectCity(city) {
 
-function selectLA() {
-    endpoint = la;
-    getData();
-}
+    if (city == 'perris') {
+        endpoint = perris;
+    } else if (city == 'la') {
+        endpoint = la;
+    } else if (city == 'sanDiego') {
+        endpoint = sanDiego;
+    } else if (city == 'sacramento') {
+        endpoint = sacramento;
+    } else if (city == 'sanFrancisco') {
+        endpoint = sanFrancisco;
+    } else if (city == 'lasVegas') {
+        endpoint = lasVegas;
+    } else if (city == 'portland') {
+        endpoint = portland;
+    }
 
-function selectSanDiego() {
-    endpoint = sanDiego;
-    getData();
-}
-
-function selectSacramento() {
-    endpoint = sacramento;
-    getData();
-}
-
-function selectSanFrancisco() {
-    endpoint = sanFrancisco;
-    getData();
-}
-
-function selectLasVegas() {
-    endpoint = lasVegas;
-    getData();
-}
-
-function selectPortland() {
-    endpoint = portland;
     getData();
 }
 

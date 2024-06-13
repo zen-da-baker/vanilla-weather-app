@@ -30,4 +30,39 @@ function nameLasVegas() {
 function namePortland() {
     document.getElementById("title").innerHTML = "Portland";
 }
+
+function selectPerris() {
+    endpoint = perris;
+    getData();
+}
+
+function selectLA() {
+    endpoint = la;
+    getData();
+}
+
+function selectSanDiego() {
+    endpoint = sanDiego;
+    getData();
+}
+
+function selectSacramento() {
+    endpoint = sacramento;
+    getData();
+}
+
+function selectSanFrancisco() {
+    endpoint = sanFrancisco;
+    getData();
+}
+
+function selectLasVegas() {
+    endpoint = lasVegas;
+    getData();
+}
+
+function selectPortland() {
+    endpoint = portland;
+    getData();
+}
 */
