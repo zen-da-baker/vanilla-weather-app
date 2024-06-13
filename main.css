@@ -26,6 +26,6 @@ html {
 .btn:hover {
     opacity: 0.75;
 }
-.btn:action {
+.btn:active {
     box-shadow: 0.1rem 0.1rem black;
 }
