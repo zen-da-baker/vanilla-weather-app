@@ -10,7 +10,40 @@ const portland = "PQR/120,92/forecast";
 
 let endpoint = lasVegas;
 
-let json;
+function selectPerris() {
+    endpoint = perris;
+    getData();
+}
+
+function selectLA() {
+    endpoint = la;
+    getData();
+}
+
+function selectSanDiego() {
+    endpoint = sanDiego;
+    getData();
+}
+
+function selectSacramento() {
+    endpoint = sacramento;
+    getData();
+}
+
+function selectSanFrancisco() {
+    endpoint = sanFrancisco;
+    getData();
+}
+
+function selectLasVegas() {
+    endpoint = lasVegas;
+    getData();
+}
+
+function selectPortland() {
+    endpoint = portland;
+    getData();
+}
 
 function renderResponse(res) {
     const periods = res.properties.periods;
@@ -88,6 +121,4 @@ const getData = async () => {
         console.log(error);
     }
 }
-
-getData();
 

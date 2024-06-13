@@ -10,36 +10,38 @@
 
     <body>
         <header>
-            <h1 id="heading">Perris Weather</h1>
+            <h1 id="title"></h1>
+
+            <h2>Weather</h2>
 
             <nav>
-                <ul>
+                <ul class="nav-items">
                     <li>
-                        <button>Perris</button>
+                        <button class="btn" onclick="namePerris(); selectPerris()">Perris</button>
                     </li>
 
                     <li>
-                        <button>LA</button>
+                        <button class="btn" onclick="nameLA(); selectLA()">LA</button>
                     </li>
 
                     <li>
-                        <button>San Diego</button>
+                        <button class="btn" onclick="nameSanDiego(); selectSanDiego()">San Diego</button>
                     </li>
 
                     <li>
-                        <button>Sacramento</button>
+                        <button class="btn" onclick="nameSacramento(); selectSacramento()">Sacramento</button>
                     </li>
 
                     <li>
-                        <button>San Francisco</button>
+                        <button class="btn" onclick="nameSanFrancico(); selectSanFrancisco()">San Francisco</button>
                     </li>
 
                     <li>
-                        <button>Las Vegas</button>
+                        <button class="btn" onclick="nameLasVegas(); selectLasVegas()">Las Vegas</button>
                     </li>
 
                     <li>
-                        <button>Portland</button>
+                        <button class="btn" onclick="namePortland(); selectPortland()">Portland</button>
                     </li>
                 </ul>
             </nav>
