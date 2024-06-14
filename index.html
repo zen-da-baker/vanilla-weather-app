@@ -9,47 +9,54 @@
     </head>
 
     <body>
-        <header>
-            <h1 id="title"></h1>
+        <header class="header">
 
-            <h2>Weather</h2>
+            <div class="container">
+                <h1 id="title">City</h1>
+                <h2>Weather</h2>
+            </div>
+            
 
-            <nav>
-                <ul class="nav-items">
-                    <li>
-                        <button class="btn" onclick="changeTitle('Perris'); selectCity('perris')">Perris</button>
-                    </li>
+            <div class="container">
+                
 
-                    <li>
-                        <button class="btn" onclick="changeTitle('Los Angeles'); selectCity('la')">LA</button>
-                    </li>
+                <nav>
+                    <ul class="nav-items">
+                        <li>
+                            <button class="btn" onclick="changeTitle('Perris'); selectCity('perris')">Perris</button>
+                        </li>
 
-                    <li>
-                        <button class="btn" onclick="changeTitle('San Diego'); selectCity('sanDiego')">San Diego</button>
-                    </li>
+                        <li>
+                            <button class="btn" onclick="changeTitle('Los Angeles'); selectCity('la')">LA</button>
+                        </li>
 
-                    <li>
-                        <button class="btn" onclick="changeTitle('Sacramento'); selectCity('sacramento')">Sacramento</button>
-                    </li>
+                        <li>
+                            <button class="btn" onclick="changeTitle('San Diego'); selectCity('sanDiego')">San Diego</button>
+                        </li>
 
-                    <li>
-                        <button class="btn" onclick="changeTitle('San Francisco'); selectCity('sanFrancisco')">San Francisco</button>
-                    </li>
+                        <li>
+                            <button class="btn" onclick="changeTitle('Sacramento'); selectCity('sacramento')">Sacramento</button>
+                        </li>
 
-                    <li>
-                        <button class="btn" onclick="changeTitle('Las Vegas'); selectCity('lasVegas')">Las Vegas</button>
-                    </li>
+                        <li>
+                            <button class="btn" onclick="changeTitle('San Francisco'); selectCity('sanFrancisco')">San Francisco</button>
+                        </li>
 
-                    <li>
-                        <button class="btn" onclick="changeTitle('Portland'); selectCity('portland')">Portland</button>
-                    </li>
-                </ul>
-            </nav>
+                        <li>
+                            <button class="btn" onclick="changeTitle('Las Vegas'); selectCity('lasVegas')">Las Vegas</button>
+                        </li>
+
+                        <li>
+                            <button class="btn" onclick="changeTitle('Portland'); selectCity('portland')">Portland</button>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
         </header>
 
-        <main>
+        <main class="main">
             <section class="gallery">
-                <div class="card">
+                <div class="card-center">
                     <div id="day1">Today</div>
         
                     <div id="night1">Tonight</div>
@@ -84,7 +91,7 @@
 
         
 
-        <footer>
+        <footer class="footer">
             <p>Weather information provided by the National Oceanic and Atmospheric Administration</p>
         </footer>
         
