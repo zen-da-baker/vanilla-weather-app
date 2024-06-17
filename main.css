@@ -35,7 +35,8 @@ h3 {
 
 .container {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .gallery {
@@ -53,7 +54,7 @@ h3 {
 
 .header {
     background-color: hsl(220, 20%, 80%);
-    padding: 2rem;
+    padding: 1rem 3rem;
 }
 
 .main {
@@ -83,7 +84,7 @@ h3 {
     padding: 2rem;
     border-radius: 1rem;
     background-color: hsl(220, 50%, 90%);
-    width: 42%;
+    width: 25.5%;
 }
 
 .btn {
@@ -91,7 +92,6 @@ h3 {
     margin: 1rem;
     padding: 0.75rem;
     border-radius: 1rem;
-    box-shadow: 0.25rem 0.25rem black;
     background-color: white;
     color: black;
     border: 0.2rem solid black;

@@ -53,6 +53,21 @@ function renderResponse(res) {
     let day2Rain = displayRain(2);
     let day2Humidity = displayHumidity(2);
 
+    let day3Rain = displayRain(4);
+    let day3Humidity = displayHumidity(4);
+
+    let day4Rain = displayRain(6);
+    let day4Humidity = displayHumidity(6);
+
+    let day5Rain = displayRain(8);
+    let day5Humidity = displayHumidity(8);
+
+    let day6Rain = displayRain(10);
+    let day6Humidity = displayHumidity(10);
+
+    let day7Rain = displayRain(12);
+    let day7Humidity = displayHumidity(12);
+
     
     
     document.getElementById("day1").innerHTML = 
@@ -82,36 +97,51 @@ function renderResponse(res) {
     document.getElementById("day3").innerHTML = 
         `
         <h2>${periods[4].name}</h2>
-        <p>${periods[4].detailedForecast}</p>
+        <h3>${periods[4].shortForecast}</h3>
         <p>Temp: ${periods[4].temperature} ${periods[4].temperatureUnit}</p>
+        <p>Winds: ${periods[4].windSpeed} ${periods[4].windDirection}</p>
+        <p>Percipitation: ${day3Rain} %</p>
+        <p>Humidity: ${day3Humidity} %</p>
         `;
 
     document.getElementById("day4").innerHTML = 
         `
         <h2>${periods[6].name}</h2>
-        <p>${periods[6].detailedForecast}</p>
+        <h3>${periods[6].shortForecast}</h3>
         <p>Temp: ${periods[6].temperature} ${periods[6].temperatureUnit}</p>
+        <p>Winds: ${periods[6].windSpeed} ${periods[6].windDirection}</p>
+        <p>Percipitation: ${day4Rain} %</p>
+        <p>Humidity: ${day4Humidity} %</p>
         `;
 
     document.getElementById("day5").innerHTML = 
         `
         <h2>${periods[8].name}</h2>
-        <p>${periods[8].detailedForecast}</p>
+        <h3>${periods[8].shortForecast}</h3>
         <p>Temp: ${periods[8].temperature} ${periods[8].temperatureUnit}</p>
+        <p>Winds: ${periods[8].windSpeed} ${periods[8].windDirection}</p>
+        <p>Percipitation: ${day5Rain} %</p>
+        <p>Humidity: ${day5Humidity} %</p>
         `;
 
     document.getElementById("day6").innerHTML = 
         `
         <h2>${periods[10].name}</h2>
-        <p>${periods[10].detailedForecast}</p>
+        <h3>${periods[10].shortForecast}</h3>
         <p>Temp: ${periods[10].temperature} ${periods[10].temperatureUnit}</p>
+        <p>Winds: ${periods[10].windSpeed} ${periods[10].windDirection}</p>
+        <p>Percipitation: ${day6Rain} %</p>
+        <p>Humidity: ${day6Humidity} %</p>
         `;
 
     document.getElementById("day7").innerHTML = 
         `
         <h2>${periods[12].name}</h2>
-        <p>${periods[12].detailedForecast}</p>
+        <h3>${periods[12].shortForecast}</h3>
         <p>Temp: ${periods[12].temperature} ${periods[12].temperatureUnit}</p>
+        <p>Winds: ${periods[12].windSpeed} ${periods[12].windDirection}</p>
+        <p>Percipitation: ${day7Rain} %</p>
+        <p>Humidity: ${day7Humidity} %</p>
         `;
 
 }
