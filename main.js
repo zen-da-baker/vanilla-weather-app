@@ -1,5 +1,9 @@
 function changeTitle(city) {
     document.getElementById("title").innerHTML = city + " Weather";
+
+    const mobileNavItems = document.getElementById("mobile-nav-items");
+
+    mobileNavItems.style.display = "none";
 }
 
 /*

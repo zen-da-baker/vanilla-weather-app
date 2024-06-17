@@ -72,6 +72,8 @@ h1, h2, h3 {
     list-style: none;
 }
 
+
+
 .hr {
     color: hsl(150, 50%, 80%);
     width: 80%;
@@ -92,6 +94,8 @@ h1, h2, h3 {
     padding: 2rem;
     color: white;
 }
+
+
 
 /* 4. Components
 ===================================== */
@@ -133,4 +137,8 @@ h1, h2, h3 {
 }
 .btn:active {
     box-shadow: 0.1rem 0.1rem black;
+}
+
+#mobile-nav-items {
+    display: none;
 }

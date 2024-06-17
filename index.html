@@ -2,27 +2,59 @@
 <html>
     <head>
         <link rel="stylesheet" href="main.css"/>
+        <link rel="stylesheet" href="responsive.css"/>
 
         <!-- <script src="findAPI.js"></script> -->
         <script src="main.js"></script>
         <script src="apiRequest.js"></script>
+        <script src="mobileMenu.js"></script>
     </head>
 
     <body>
         <header class="header">
             <div class="container">
-
-            
-
-            <div class="container">
-                <h1 id="title">Weather</h1>
-            </div>
-            
-
-            <div class="container">
                 
+                <h1 id="title">Weather</h1>
 
-                <nav>
+                <button class="btn" id="mobileMenuId" onclick="toggleMenu()">Menu</button>
+
+                <div class="container desktop-nav">
+                    <nav>
+                        <ul class="nav-items">
+                            <li>
+                                <button class="btn" onclick="changeTitle('Perris'); selectCity('perris')">Perris</button>
+                            </li>
+
+                            <li>
+                                <button class="btn" onclick="changeTitle('Los Angeles'); selectCity('la')">LA</button>
+                            </li>
+
+                            <li>
+                                <button class="btn" onclick="changeTitle('San Diego'); selectCity('sanDiego')">San Diego</button>
+                            </li>
+
+                            <li>
+                                <button class="btn" onclick="changeTitle('Sacramento'); selectCity('sacramento')">Sacramento</button>
+                            </li>
+
+                            <li>
+                                <button class="btn" onclick="changeTitle('San Francisco'); selectCity('sanFrancisco')">San Francisco</button>
+                            </li>
+
+                            <li>
+                                <button class="btn" onclick="changeTitle('Las Vegas'); selectCity('lasVegas')">Las Vegas</button>
+                            </li>
+
+                            <li>
+                                <button class="btn" onclick="changeTitle('Portland'); selectCity('portland')">Portland</button>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+
+            <div class="container mobile-nav">
+                <nav id="mobile-nav-items">
                     <ul class="nav-items">
                         <li>
                             <button class="btn" onclick="changeTitle('Perris'); selectCity('perris')">Perris</button>
@@ -54,7 +86,7 @@
                     </ul>
                 </nav>
             </div>
-        </div>
+            
         </header>
 
         <main class="main">

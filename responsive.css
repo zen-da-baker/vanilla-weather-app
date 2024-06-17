@@ -1,0 +1,49 @@
+@media screen and (min-width: 1280px) {
+    .desktop-nav {
+        display: block;
+    }
+
+    .mobile-nav {
+        display: none;
+    }
+
+    #mobileMenuId {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    .card {
+        width: 40%;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .desktop-nav {
+        display: none;
+    }
+
+    .mobile-nav {
+        display: block;
+    }
+
+    #mobile-nav-items {
+        display: none;
+    }
+
+    #mobileMenuId {
+        display: block;
+    }
+
+    .nav-items {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .card {
+        width: 90%;
+    }
+}
