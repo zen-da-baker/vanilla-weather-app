@@ -50,6 +50,12 @@ function renderResponse(res) {
         }
     }
 
+    let day1Rain = displayRain(0);
+    let day1Humidity = displayHumidity(0);
+
+    let night1Rain = displayRain(1);
+    let night1Humidity = displayHumidity(1);
+
     let day2Rain = displayRain(2);
     let day2Humidity = displayHumidity(2);
 
@@ -72,21 +78,27 @@ function renderResponse(res) {
     
     document.getElementById("day1").innerHTML = 
         `
-        <h2>${periods[0].name}</h2>
+        <h2 class="center">${periods[0].name}</h2>
         <p>${periods[0].detailedForecast}</p>
         <p>Temp: ${periods[0].temperature} ${periods[0].temperatureUnit}</p>
+        <p>Winds: ${periods[0].windSpeed} ${periods[0].windDirection}</p>
+        <p>Percipitation: ${day1Rain} %</p>
+        <p>Humidity: ${day1Humidity} %</p>
         `;
     
     document.getElementById("night1").innerHTML = 
         `
-        <h3>${periods[1].name}</h2>
+        <h2 class="center">${periods[1].name}</h2>
         <p>${periods[1].detailedForecast}</p>
         <p>Temp: ${periods[1].temperature} ${periods[1].temperatureUnit}</p>
+        <p>Winds: ${periods[1].windSpeed} ${periods[1].windDirection}</p>
+        <p>Percipitation: ${night1Rain} %</p>
+        <p>Humidity: ${night1Humidity} %</p>
         `;
 
     document.getElementById("day2").innerHTML = 
         `
-        <h2>${periods[2].name}</h2>
+        <h2 class="center">${periods[2].name}</h2>
         <h3>${periods[2].shortForecast}</h3>
         <p>Temp: ${periods[2].temperature} ${periods[2].temperatureUnit}</p>
         <p>Winds: ${periods[2].windSpeed} ${periods[2].windDirection}</p>
@@ -96,7 +108,7 @@ function renderResponse(res) {
 
     document.getElementById("day3").innerHTML = 
         `
-        <h2>${periods[4].name}</h2>
+        <h2 class="center">${periods[4].name}</h2>
         <h3>${periods[4].shortForecast}</h3>
         <p>Temp: ${periods[4].temperature} ${periods[4].temperatureUnit}</p>
         <p>Winds: ${periods[4].windSpeed} ${periods[4].windDirection}</p>
@@ -106,7 +118,7 @@ function renderResponse(res) {
 
     document.getElementById("day4").innerHTML = 
         `
-        <h2>${periods[6].name}</h2>
+        <h2 class="center">${periods[6].name}</h2>
         <h3>${periods[6].shortForecast}</h3>
         <p>Temp: ${periods[6].temperature} ${periods[6].temperatureUnit}</p>
         <p>Winds: ${periods[6].windSpeed} ${periods[6].windDirection}</p>
@@ -116,7 +128,7 @@ function renderResponse(res) {
 
     document.getElementById("day5").innerHTML = 
         `
-        <h2>${periods[8].name}</h2>
+        <h2 class="center">${periods[8].name}</h2>
         <h3>${periods[8].shortForecast}</h3>
         <p>Temp: ${periods[8].temperature} ${periods[8].temperatureUnit}</p>
         <p>Winds: ${periods[8].windSpeed} ${periods[8].windDirection}</p>
@@ -126,7 +138,7 @@ function renderResponse(res) {
 
     document.getElementById("day6").innerHTML = 
         `
-        <h2>${periods[10].name}</h2>
+        <h2 class="center">${periods[10].name}</h2>
         <h3>${periods[10].shortForecast}</h3>
         <p>Temp: ${periods[10].temperature} ${periods[10].temperatureUnit}</p>
         <p>Winds: ${periods[10].windSpeed} ${periods[10].windDirection}</p>
@@ -136,7 +148,7 @@ function renderResponse(res) {
 
     document.getElementById("day7").innerHTML = 
         `
-        <h2>${periods[12].name}</h2>
+        <h2 class="center">${periods[12].name}</h2>
         <h3>${periods[12].shortForecast}</h3>
         <p>Temp: ${periods[12].temperature} ${periods[12].temperatureUnit}</p>
         <p>Winds: ${periods[12].windSpeed} ${periods[12].windDirection}</p>
