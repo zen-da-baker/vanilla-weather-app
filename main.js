@@ -1,5 +1,5 @@
 function changeTitle(city) {
-    document.getElementById("title").innerHTML = city;
+    document.getElementById("title").innerHTML = city + " Weather";
 }
 
 /*
