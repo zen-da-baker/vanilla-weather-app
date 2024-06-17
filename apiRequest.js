@@ -34,13 +34,26 @@ function selectCity(city) {
 function renderResponse(res) {
     const periods = res.properties.periods;
 
-    if (periods.propabilityOfPercipitation.value == null) {
-        periods.probabilityOfPercipitation.value == 0;
+    function displayRain(i) {
+        if (periods[i].probabilityOfPrecipitation.value == undefined || periods[i].probabilityOfPrecipitation.value == null) {
+             return 0;
+        } else {
+            return periods[i].probabilityOfPrecipitation.value;
+        }
     }
 
-    if (periods.relativeHumidity.value == null) {
-        periods.relativeHumidity.value == 0;
+    function displayHumidity(i) {
+        if (periods[i].relativeHumidity.value == undefined || periods[i].relativeHumidity.value == null) {
+            return 0;
+        } else {
+            return periods[i].relativeHumidity.value;
+        }
     }
+
+    let day2Rain = displayRain(2);
+    let day2Humidity = displayHumidity(2);
+
+    
     
     document.getElementById("day1").innerHTML = 
         `
@@ -59,10 +72,11 @@ function renderResponse(res) {
     document.getElementById("day2").innerHTML = 
         `
         <h2>${periods[2].name}</h2>
+        <h3>${periods[2].shortForecast}</h3>
         <p>Temp: ${periods[2].temperature} ${periods[2].temperatureUnit}</p>
         <p>Winds: ${periods[2].windSpeed} ${periods[2].windDirection}</p>
-        <p>Percipitation: ${periods[2].probabilityOfPercipitation.value}</p>
-        <p>Humidity: ${periods[2].relativeHumidity.value}</p>
+        <p>Percipitation: ${day2Rain} %</p>
+        <p>Humidity: ${day2Humidity} %</p>
         `;
 
     document.getElementById("day3").innerHTML = 
