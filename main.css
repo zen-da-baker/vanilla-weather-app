@@ -83,6 +83,9 @@ h1, h2, h3 {
 .header {
     background-color: hsl(220, 20%, 10%);
     padding: 0.25rem 3rem;
+    position: fixed;
+    width: 95vw;
+    margin-bottom: 5rem;
 }
 
 .main {
