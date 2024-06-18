@@ -46,4 +46,8 @@
     .card {
         width: 90%;
     }
+
+    p {
+        font-size: 1.5rem;
+    }
 }
