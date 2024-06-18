@@ -56,12 +56,12 @@ function renderResponse(res) {
 	const periods = res.properties.periods;
 
 	document.getElementById("day1").innerHTML =
-	`
-	<h2 class="center">${periods[0].name}</h2>
-	<p>${periods[0].detailedForecast}</p>
-	<p>Temp: ${periods[0].temperature} ${periods[0].temperatureUnit}</p>
-	<p>Winds: ${periods[0].windSpeed} ${periods[0].windDirection}</p>
-	`;
+		`
+		<h2 class="center">${periods[0].name}</h2>
+		<p>${periods[0].detailedForecast}</p>
+		<p>Temp: ${periods[0].temperature} ${periods[0].temperatureUnit}</p>
+		<p>Winds: ${periods[0].windSpeed} ${periods[0].windDirection}</p>
+		`;
 }
 ```
 The data of the function is added to a DOM element using string insertion into template literals and DOM manipulation. 
@@ -80,22 +80,21 @@ function displayRain(i) {
 let day1Rain = displayRain(0);
 
 document.getElementById("day1").innerHTML =
-`
-<h2 class="center">${periods[0].name}</h2>
-<p>${periods[0].detailedForecast}</p>
-<p>Temp: ${periods[0].temperature} ${periods[0].temperatureUnit}</p>
-<p>Winds: ${periods[0].windSpeed} ${periods[0].windDirection}</p>
-<p>Percipitation: ${day1Rain} %</p>
-<p>Humidity: ${day1Humidity} %</p>
-
-`;
+	`
+	<h2 class="center">${periods[0].name}</h2>
+	<p>${periods[0].detailedForecast}</p>
+	<p>Temp: ${periods[0].temperature} ${periods[0].temperatureUnit}</p>
+	<p>Winds: ${periods[0].windSpeed} ${periods[0].windDirection}</p>
+	<p>Percipitation: ${day1Rain} %</p>
+	<p>Humidity: ${day1Humidity} %</p>
+	`;
 ```
 ### City Selection
 The user could choose a city to obtain a 7 day forecast for but pushing a button that executes the data fetching for that city.
 ```HTML
 <button 
-		class="btn" 
-		onclick="changeTitle('Perris'); selectCity('perris')"
+	class="btn" 
+	onclick="changeTitle('Perris'); selectCity('perris')"
 >Perris</button>
 ```
 The title of the site is changed with a function that takes a city name as an argument. 
