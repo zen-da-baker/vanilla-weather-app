@@ -1,5 +1,7 @@
+// Weather API source url
 const url = "https://api.weather.gov/gridpoints/";
 
+// City endpoints for the weather api
 const perris = "SGX/65,25/forecast";
 const la = "LOX/164,41/forecast";
 const sanDiego = "SGX/62,12/forecast";
@@ -8,8 +10,10 @@ const sanFrancisco = "MTR/85,102/forecast";
 const lasVegas = "VEF/124,94/forecast";
 const portland = "PQR/120,92/forecast";
 
+// Selected endpoint for the fetch function
 let endpoint = lasVegas;
 
+// Endpoint selection
 function selectCity(city) {
 
     if (city == 'perris') {
@@ -28,13 +32,20 @@ function selectCity(city) {
         endpoint = portland;
     }
 
+    // Call the fetch data function after a city is selected
     getData();
 }
 
+// Render function for placement inside the fetch data function to render the JSON response
 function renderResponse(res) {
+
+    // Shorten the JSON render dot notation
     const periods = res.properties.periods;
 
+    // display precipitation stats by taking an index of the JSON response
     function displayRain(i) {
+
+        // if the result is null, display a 0 instead
         if (periods[i].probabilityOfPrecipitation.value == undefined || periods[i].probabilityOfPrecipitation.value == null) {
              return 0;
         } else {
@@ -42,7 +53,10 @@ function renderResponse(res) {
         }
     }
 
+    // display humidity stats by taking the index of the JSON response
     function displayHumidity(i) {
+
+        // if the result is null, display a 0 instead
         if (periods[i].relativeHumidity.value == undefined || periods[i].relativeHumidity.value == null) {
             return 0;
         } else {
@@ -50,6 +64,7 @@ function renderResponse(res) {
         }
     }
 
+    // Rain and humidity variables with values of the rain and humidity functions
     let day1Rain = displayRain(0);
     let day1Humidity = displayHumidity(0);
 
@@ -75,7 +90,7 @@ function renderResponse(res) {
     let day7Humidity = displayHumidity(12);
 
     
-    
+    // render JSON response on manipulated DOM elements of the page
     document.getElementById("day1").innerHTML = 
         `
         <h2 class="center">${periods[0].name}</h2>
@@ -158,18 +173,23 @@ function renderResponse(res) {
 
 }
 
+// Asyncronous fetch data function
 const getData = async () => {
     try {
+        // fetch data using the url and the selected endpoint
         const response = await fetch(url+endpoint);
 
+        // log the JSON response and use it as an argument for the render function
         if (response.ok) {
             const jsonResponse = await response.json();
             console.log(jsonResponse);
             renderResponse(jsonResponse);
         } else {
+            // throw error if the data could not be fetched
             throw new Error('Response failed');
         }
     } catch (error) {
+        // log the error
         console.log(error);
     }
 }

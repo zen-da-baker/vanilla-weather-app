@@ -1,3 +1,4 @@
+/* Desktops larger than 1280p wide */
 @media screen and (min-width: 1280px) {
     .desktop-nav {
         display: block;
@@ -12,12 +13,14 @@
     }
 }
 
+/* Screen sizes smaller than 1280p where the cards begin to wrap */
 @media screen and (max-width: 1280px) {
     .card {
         width: 40%;
     }
 }
 
+/* Screen sizes smaller than 1200p where the desktop nav begins to wrap and the mobile nav takes over */
 @media screen and (max-width: 1200px) {
     .desktop-nav {
         display: none;
@@ -42,6 +45,7 @@
     }
 }
 
+/* Screen sizes smaller than 1000p where the cards wrap once again */
 @media screen and (max-width: 1000px) {
     .card {
         width: 90%;

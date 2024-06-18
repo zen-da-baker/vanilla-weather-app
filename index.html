@@ -1,27 +1,37 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <!-- Page styling -->
         <link rel="stylesheet" href="main.css"/>
         <link rel="stylesheet" href="responsive.css"/>
 
         <!-- <script src="findAPI.js"></script> -->
+
+        <!-- Page functionality using primariy JavaScript functions -->
         <script src="main.js"></script>
         <script src="apiRequest.js"></script>
         <script src="mobileMenu.js"></script>
     </head>
 
     <body>
+        <!-- Header of page -->
         <header class="header">
+
+            <!-- Wrapping header elements in a flexbox container -->
             <div class="container">
                 
+                <!-- Page title can be edited based on the city selected using DOM manipulation in JavaScript -->
                 <h1 id="title">Weather</h1>
 
+                <!-- Mobile menu toggle for the city selection -->
                 <button class="btn" id="mobileMenuId" onclick="toggleMenu()">Menu</button>
 
+                <!-- Desktop only nav bar aligned horizontally -->
                 <div class="container desktop-nav">
                     <nav>
                         <ul class="nav-items">
                             <li>
+                                <!-- For all buttons, a btn class, title change function, and city selection function for the API call -->
                                 <button class="btn" onclick="changeTitle('Perris'); selectCity('perris')">Perris</button>
                             </li>
 
@@ -53,6 +63,7 @@
                 </div>
             </div>
 
+            <!-- Mobile only vertical nav bar -->
             <div class="container mobile-nav">
                 <nav id="mobile-nav-items">
                     <ul class="nav-items">
@@ -89,6 +100,7 @@
             
         </header>
 
+        <!-- Body of the page arranged in a gallery of cards that hold the fetched weather data -->
         <main class="main">
             <section class="gallery">
                 <div class="card-center">
@@ -127,7 +139,7 @@
         </main>
 
         
-
+        <!-- Citation of the data source in footer with a link -->
         <footer class="footer">
             <p>Weather information provided by the 
                 <a class="link" href="https://www.noaa.gov/" target="_blank">National Oceanic and Atmospheric Administration</a>.

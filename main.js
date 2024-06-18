@@ -1,8 +1,11 @@
+// Changes the title of the site by taking a city name as a paramerer from the page
 function changeTitle(city) {
+
+    // Page title DOM object manipulated
     document.getElementById("title").innerHTML = city + " Weather";
 
+    // Hide mobile menu after the title is changed 
     const mobileNavItems = document.getElementById("mobile-nav-items");
-
     mobileNavItems.style.display = "none";
 }
 
