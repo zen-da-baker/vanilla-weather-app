@@ -106,6 +106,7 @@ h1, h2, h3 {
 .card-center {
     border: 0.1rem solid black;
     margin: 1rem;
+    margin-top: 5rem;
     padding: 2rem;
     border-radius: 1rem;
     background-color: hsl(220, 20%, 10%);
