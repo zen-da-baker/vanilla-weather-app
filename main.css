@@ -143,6 +143,10 @@ h1, h2, h3 {
     box-shadow: 0.1rem 0.1rem black;
 }
 
+.icon {
+    width: 1rem;
+}
+
 #mobile-nav-items {
     display: none;
 }
